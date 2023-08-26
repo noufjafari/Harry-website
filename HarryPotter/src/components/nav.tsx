@@ -1,5 +1,6 @@
 import logo from "../assets/logo.png"
 export default function nav() {
+    
   return (
     <>
 
@@ -12,11 +13,10 @@ export default function nav() {
                 <img src={logo} className="w-7" alt="" />
 
             <ul className="flex items-center gap-5">
-                <li><a className="hover:text-cyan-400 transition-colors" href="/home">Home</a></li>
-                <li><a className="hover:text-cyan-400 transition-colors" href="/about">Cast</a></li>
-                {/* <li><a className="hover:text-cyan-400 transition-colors" href="">Link 3</a></li>
-                <li><a className="hover:text-cyan-400 transition-colors" href="">Link 4</a></li> */}
-                <li><a className="hover:text-cyan-400 transition-colors m-10 text-lg" href="/Login">Sign Out</a></li>
+                <li><a className="hover:text-[#417280] transition-colors" href="/home">Home</a></li>
+                <li><a className="hover:text-[#417280] transition-colors" href="/about">Cast</a></li>
+                 <li><a className="hover:text-[#417280] transition-colors" href="/movie">Movies</a></li>
+                <li><a className="hover:text-[#417280] transition-colors m-10 text-lg" href="/Login">Sign Out</a></li>
             </ul>
         </div>
     </div>

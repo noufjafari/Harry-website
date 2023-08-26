@@ -15,7 +15,7 @@ export default function intro() {
 <video className="w-screen" src={videobg}  autoPlay  muted></video>
 
 {show &&
-  <a href="/home"><button className=" btn group  h-12 w-48 overflow-hidden rounded-2xl bg-slate-800 text-lg font-bold text-white">
+  <a href="/Login"><button className=" btn group  h-12 w-48 overflow-hidden rounded-2xl bg-slate-800 text-lg font-bold text-white italic">
     Welcome
     <div className=" absolute inset-0 h-full w-full scale-0 rounded-2xl transition-all duration-300 group-hover:scale-100 group-hover:bg-white/30"></div>
   </button></a>}
