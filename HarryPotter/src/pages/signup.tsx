@@ -1,15 +1,29 @@
 import logo from "../assets/harry-ba8d7-potter-32bb6-logo-fa67a-png-d5dd4-transparent-c9516-amp-38942-svg-d43d9-vector-b4317-freebie---supply.png"
-// import react, {useState} from "react";
+import React,{useState} from "react"
 
 export default function signup() {
-    // const name = useRef()
-    // const email = useRef()
-    // const password = useRef()
+    const [email,setEmail]= useState('');
+    const [name,setName]= useState('');    
+    const [pass,setPass]= useState('');
 
-    // const getdat=()=>{
-    //     console.log(name,email,password);
-        
-    // }
+
+    const handelLogic=()=>{
+
+        if (email.trim()==='' || pass.trim()==='' || name.trim()===''){
+            alert ("please you need to fill-out all feilds")
+        return;
+            
+        } else{
+        localStorage.setItem('email',email);
+        localStorage.setItem('name',name);
+        localStorage.setItem('pass',pass);
+        alert ("sign up is successful")
+
+        }
+        location.href = "./Login"  
+
+
+    }
   return (
     <>
     
@@ -26,19 +40,19 @@ export default function signup() {
 
                 <form action="" className="sm:w-2/3 w-full px-4 lg:px-0 mx-auto">
                     <div className="pb-2 pt-4">
-                        <input type="text" name="name"  placeholder="Name" className="block w-full p-4 text-lg rounded-sm bg-black"/>
+                        <input type="text" name="name"  value={name} onChange={(e)=> setName(e.target.value)} placeholder="Name" className="block w-full p-4 text-lg rounded-sm bg-black"/>
                     </div>
                     <div className="pb-2 pt-4">
-                        <input type="email" name="email"  placeholder="Email" className="block w-full p-4 text-lg rounded-sm bg-black"/>
+                        <input type="email" name="email" value={email} onChange={(e)=> setEmail(e.target.value)} placeholder="Email" className="block w-full p-4 text-lg rounded-sm bg-black"/>
                     </div>
                     <div className="pb-2 pt-4">
-                        <input className="block w-full p-4 text-lg rounded-sm bg-black" type="password" name="password" placeholder="Password"/>
+                        <input className="block w-full p-4 text-lg rounded-sm bg-black" value={pass} onChange={(e)=> setPass(e.target.value)} type="password" name="password" placeholder="Password"/>
                     </div>
                     <div className="text-right text-gray-400 hover:underline hover:text-gray-100">
                         <a href="/Login">already have an account? Log in</a>
                     </div>
                     <div className="px-4 pb-2 pt-4">
-                        <a href="/Login"><button  className="uppercase block w-full p-4 text-lg rounded-full bg-zinc-600 hover:bg-zinc-800 focus:outline-none">Sign in</button></a>
+                        <button onClick={handelLogic} className="uppercase block w-full p-4 text-lg rounded-full bg-zinc-600 hover:bg-zinc-800 focus:outline-none">Sign in</button>
                     </div>
 
                 </form>

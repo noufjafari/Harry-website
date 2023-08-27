@@ -1,14 +1,25 @@
-// import React, {useState} from "react";
 import logo from "../assets/harry-ba8d7-potter-32bb6-logo-fa67a-png-d5dd4-transparent-c9516-amp-38942-svg-d43d9-vector-b4317-freebie---supply.png"
-export default function Login() {
-    // const [email, setEmail] = useState('');
-    // const [pass, setPass] = useState('');
+import React,{useState} from "react"
 
-    // const handleSubmit = (e: { preventDefault: () => void; }) => {
-    //     e.preventDefault();
-    //     console.log(email);
-        
-    // }
+export default function Login() {
+    const [email,setEmail]= useState('');
+    const [pass,setPass]= useState('');
+
+    const handelLogic=()=>{
+
+        if (email.trim()==='' || pass.trim()===''){
+            alert ("please you need to fill-out both password and email")
+        return;
+            
+        } else{
+        localStorage.setItem('email',email);
+        localStorage.setItem('pass',pass);
+        alert ("log in successful")
+        }
+        location.href = "./home"  
+
+    }
+
     return (
     <>
 
@@ -33,16 +44,16 @@ export default function Login() {
 
                 <form  className="sm:w-2/3 w-full px-4 lg:px-0 mx-auto">
                     <div className="pb-2 pt-4">
-                        <input type="email" name="email"  placeholder="Email" className="block w-full p-4 text-lg rounded-sm bg-black"/>
+                        <input type="email" value={email} onChange={(e)=> setEmail(e.target.value)} name="email"  placeholder="Email" className="block w-full p-4 text-lg rounded-sm bg-black"/>
                     </div>
                     <div className="pb-2 pt-4">
-                        <input className="block w-full p-4 text-lg rounded-sm bg-black" type="password" name="password" placeholder="Password"/>
+                        <input className="block w-full p-4 text-lg rounded-sm bg-black" value={pass} onChange={(e)=> setPass(e.target.value)} type="password" name="password" placeholder="Password"/>
                     </div>
                     <div className="text-right text-gray-400 hover:underline hover:text-gray-100">
                         <a href="/signup">don't have an account? sign up</a>
                     </div>
                     <div className="px-4 pb-2 pt-4">
-                        <a href="/home"><button className="uppercase block w-full p-4 text-lg rounded-full bg-zinc-600 hover:bg-zinc-800 focus:outline-none">Log in</button></a>
+                    <button onClick={handelLogic} className="uppercase block w-full p-4 text-lg rounded-full bg-zinc-600 hover:bg-zinc-800 focus:outline-none">Log in</button>
                     </div>
 
                 </form>

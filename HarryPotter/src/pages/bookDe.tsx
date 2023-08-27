@@ -25,44 +25,6 @@ function bookDe() {
     const params = useParams()
         let bookData = null;
 
-    if (params.id == '01'){
-        
-        bookData =  <Card2 src={book1} title='Harry Potter and the Sorcerers Stone' author='J. K. Rowling.' summary=' An orphaned boy enrolls in a school of wizardry, where he learns the truth about himself, his family and the terrible evil that haunts the magical world. On his eleventh birthday, Harry Potter (Daniel Radcliffe) discovers that he is no ordinary boy.' />
-
-    }
-
-    if (params.id == '02'){
-        bookData =  <Card2 src={book2} title='Harry Potter and the Chamber of Secrets' author='J. K. Rowling.' summary=' An orphaned boy enrolls in a school of wizardry, where he learns the truth about himself, his family and the terrible evil that haunts the magical world. On his eleventh birthday, Harry Potter (Daniel Radcliffe) discovers that he is no ordinary boy.' />
-    }
-
-    if (params.id == '03'){
-        bookData =  <Card2 src={book3} title='Harry Potter and the Prisoner of Azkaban' author='J. K. Rowling.' summary=' An orphaned boy enrolls in a school of wizardry, where he learns the truth about himself, his family and the terrible evil that haunts the magical world. On his eleventh birthday, Harry Potter (Daniel Radcliffe) discovers that he is no ordinary boy.' />
-
-    }
-
-    if (params.id == '04'){
-        bookData =  <Card2 src={book4} title='Harry Potter and the Goblet of Fire' author='J. K. Rowling.' summary=' An orphaned boy enrolls in a school of wizardry, where he learns the truth about himself, his family and the terrible evil that haunts the magical world. On his eleventh birthday, Harry Potter (Daniel Radcliffe) discovers that he is no ordinary boy.' />
-
-        
-    }
-    if (params.id == '05'){
-        bookData =  <Card2 src={book5} title='Harry Potter and the Order of the Phoenix' author='J. K. Rowling.' summary=' An orphaned boy enrolls in a school of wizardry, where he learns the truth about himself, his family and the terrible evil that haunts the magical world. On his eleventh birthday, Harry Potter (Daniel Radcliffe) discovers that he is no ordinary boy.' />
-
-    }
-
-    if (params.id == '06'){
-        bookData =  <Card2 src={book6} title='Harry Potter and the Half-Blood Prince' author='J. K. Rowling.' summary=' An orphaned boy enrolls in a school of wizardry, where he learns the truth about himself, his family and the terrible evil that haunts the magical world. On his eleventh birthday, Harry Potter (Daniel Radcliffe) discovers that he is no ordinary boy.' />
-
-    }
-    if (params.id == '07'){
-        bookData =  <Card2 src={book7} title='Harry Potter and the Deathly Hallows' author='J. K. Rowling.' summary=' An orphaned boy enrolls in a school of wizardry, where he learns the truth about himself, his family and the terrible evil that haunts the magical world. On his eleventh birthday, Harry Potter (Daniel Radcliffe) discovers that he is no ordinary boy.' />
-
-    }
-
-    if (params.id == '08'){
-        bookData =  <Card2 src={book8} title='Harry Potter and the Cursed Child' author='J. K. Rowling.' summary=' An orphaned boy enrolls in a school of wizardry, where he learns the truth about himself, his family and the terrible evil that haunts the magical world. On his eleventh birthday, Harry Potter (Daniel Radcliffe) discovers that he is no ordinary boy.' />
-
-    }
 
     if (params.id == '09'){
         bookData =  <Card2 src={book9} title='Fantastic Beasts and Where to Find Them ' author='J. K. Rowling.' summary=' An orphaned boy enrolls in a school of wizardry, where he learns the truth about himself, his family and the terrible evil that haunts the magical world. On his eleventh birthday, Harry Potter (Daniel Radcliffe) discovers that he is no ordinary boy.' />
@@ -113,7 +75,7 @@ function bookDe() {
         bookData != null ? 
         <>
         <div className=" flex justify-center">
-        <div className=" py-3 gap-5 text-center mt-10 mb-20">
+        <div className=" py-3 gap-5 text-center m-20">
         <p className="text-2xl m-5 mx-10  w-80">{bookData}</p></div>
         </div>
         </> 

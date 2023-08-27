@@ -17,18 +17,37 @@ import book14 from '../assets/141414516ZAsq057L.jpg';
 import book15 from '../assets/151515B01ETJABQK_c9192ee4_cover.jpeg';
 import book16 from '../assets/1616161338263897.01.S001.JUMBOXXX.jpg';
 
-import React, { useState } from 'react';
-
-
-
+import React,{useState} from "react";
 
 export default function home() {
 
-  return (
+  const [search,setSearch]= useState('');
+  const [items,setItems]=useState([
+
+   
+    {id:1 , title:"Harry Potter and the Sorcerer's Stone", image:book1},
+    {id:2 , title:"Harry Potter and the Chamber of Secrets", image:book2},
+    {id:3 , title:"Harry Potter and the Prisoner of Azkaban", image:book3},
+    {id:4 , title:"Harry Potter and the Goblet of Fire", image:book4},
+    {id:5 , title:"Harry Potter and the Order of the Phoenix", image:book5},
+    {id:6 , title:"Harry Potter and the Half-Blood Prince", image:book6},
+    {id:7 , title:"Harry Potter and the Deathly Hallows", image:book7},
+    {id:8 , title:"Harry Potter and the Cursed Child", image:book8},    
+  ]);
+
+  const handleSearch = (event: { target: { value: React.SetStateAction<string>; }; }) => {
+    setSearch(event.target.value);
+  };
+
+  const filteredItems = items.filter((item) =>
+    item.title.toLowerCase().includes(search.toLowerCase())
+  );
+
+    return (
     <>
     <Nav/>
     <div className="h-screen flex items-center">
-	<section className="backg_h bg-cover bg-black py-96 w-screen max-sm:w-screen bg-fixed">
+	<section className="backg_h bg-cover bg-black py-96 w-screen  bg-fixed">
 		<div className="container mx-auto text-white">
 			<div className="flex items-center">
 				<div className="tracking-wide italic w-full text-center">
@@ -40,8 +59,8 @@ export default function home() {
 			</div>
 	</section>
 </div>
-        <div className="h-screen ">
-        <div className="all">
+        <div className="h-screen  ">
+        <div className="all ">
         <div className="text-center mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8 mt-20 text-white">
           <h2 className="italic text-5xl font-bold tracking-tight text-white">Harry Potter Books</h2>
             </div>
@@ -51,11 +70,13 @@ export default function home() {
   <div className="relative mb-4 flex w-96 flex-wrap items-stretch">
     <input
       type="search"
+      value={search}
+      onChange={handleSearch}
       className="relative m-0 block w-[1px] min-w-0 flex-auto rounded border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
       placeholder="Search"
       aria-label="Search"
       aria-describedby="button-addon2" />
-
+ 
     {/* <!--Search icon--> */}
     <span
       className="input-group-text flex items-center whitespace-nowrap rounded px-3 py-1.5 text-center text-base font-normal text-neutral-700 dark:text-neutral-200"
@@ -71,166 +92,48 @@ export default function home() {
           clip-rule="evenodd" />
       </svg>
     </span>
+
   </div>
 </div>
 
-            <div className="">
-            <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-    <h2 className="italic text-2xl font-bold tracking-tight text-white">The main Harry Potter books </h2>
 
-    <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10  max-sm: lg:grid-cols-4 xl:gap-x-8">
+<div className="flex flow-row ">   
+<div className="grid grid-cols-4 mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+  
+{filteredItems.map((item) => (
+        <div key={item.id}>
+    <div className="mt-6 flex gap-x-6 gap-y-10 xl:gap-x-8">
       <div className="group relative">
-        <div className="aspect-h-1 aspect-w-1 w-full max-sm:w-60  overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-        <a href="/book/01"><img src={book1} alt="Front of men&#039;s Basic Tee in black." className="h-full w-full object-cover object-center lg:h-full lg:w-full"/></a>
+        <div className="aspect-h-1 aspect-w-1 w-11/12  overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+        <a href="/book/01"><img alt="Front of men&#039;s Basic Tee in black." className="h-fullw-full object-cover object-center lg:h-full lg:w-full" src={item.image} /></a>
         </div>
-        <div className="mt-4 flex justify-between">
+          <h3 className="text-sm text-white">        
+          <div className="mt-4 flex justify-between">
           <div>
             <h3 className="text-sm text-white">
               <a href="/book/01">
                 <span aria-hidden="true" className="absolute inset-0"></span>
-                Harry Potter and the Sorcerer's Stone
-              </a>
+                {item.title}</a>
             </h3>
-            <p className="mt-1 text-sm text-gray-500">1997</p>
+            <p className="mt-1 text-sm text-gray-500">- J.K. Rowling -</p>
           </div>
-        </div>
-      </div>
+        </div></h3>
+         </div>
+         </div>
+         </div>
 
-      {/* <!-- More products... --> */}
-      
-      <div className="group relative">
-        <div className="aspect-h-1 aspect-w-1 w-full max-sm:w-60 overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-        <a href="/book/02"><img src={book2} alt="Front of men&#039;s Basic Tee in black." className="h-full w-full object-cover object-center lg:h-full lg:w-full"/></a>
-        </div>
-        <div className="mt-4 flex justify-between">
-          <div>
-            <h3 className="text-sm text-white">
-              <a href="/book/02">
-                <span aria-hidden="true" className="absolute inset-0"></span>
-                Harry Potter and the Chamber of Secrets
-              </a>
-            </h3>
-            <p className="mt-1 text-sm text-gray-500">1998</p>
+      ))}
+      </div>  
           </div>
-        </div>
-      </div>
-      {/* <!-- More products... --> */}
-
-      <div className="group relative">
-        <div className="aspect-h-1 aspect-w-1 w-full max-sm:w-60 overflow-hidden  rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-        <a href="/book/03"><img src={book3} alt="Front of men&#039;s Basic Tee in black." className="h-full w-full object-cover object-center lg:h-full lg:w-full"/></a>
-        </div>
-        <div className="mt-4 flex justify-between">
-          <div>
-            <h3 className="text-sm text-white">
-              <a href="/book/03">
-                <span aria-hidden="true" className="absolute inset-0"></span>
-                Harry Potter and the Prisoner of Azkaban              </a>
-            </h3>
-            <p className="mt-1 text-sm text-gray-500">1999</p>
-          </div>
-        </div>
-      </div>
-      {/* <!-- More products... --> */}
-
-      <div className="group relative">
-        <div className="aspect-h-1 aspect-w-1 w-full max-sm:w-60 overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-        <a href="/book/04"><img src={book4} alt="Front of men&#039;s Basic Tee in black." className="h-full w-full object-cover object-center lg:h-full lg:w-full"/></a>
-        </div>
-        <div className="mt-4 flex justify-between">
-          <div>
-            <h3 className="text-sm text-white">
-              <a href="/book/04">
-                <span aria-hidden="true" className="absolute inset-0"></span>
-                Harry Potter and the Goblet of Fire              </a>
-            </h3>
-            <p className="mt-1 text-sm text-gray-500">2000</p>
-          </div>
-        </div>
-      </div>
-      {/* <!-- More products... --> */}
-
-      <div className="group relative">
-        <div className="aspect-h-1 aspect-w-1 w-full max-sm:w-60 overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-        <a href="/book/05"><img src={book5} alt="Front of men&#039;s Basic Tee in black." className="h-full w-full object-cover object-center lg:h-full lg:w-full"/></a>
-        </div>
-        <div className="mt-4 flex justify-between">
-          <div>
-            <h3 className="text-sm text-white">
-              <a href="/book/05">
-                <span aria-hidden="true" className="absolute inset-0"></span>
-                Harry Potter and the Order of the Phoenix              </a>
-            </h3>
-            <p className="mt-1 text-sm text-gray-500">2003</p>
-          </div>
-        </div>
-      </div>
-      {/* <!-- More products... --> */}
 
 
-      <div className="group relative">
-        <div className="aspect-h-1 aspect-w-1 w-full max-sm:w-60 overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-        <a href="/book/06"><img src={book6} alt="Front of men&#039;s Basic Tee in black." className="h-full w-full object-cover object-center lg:h-full lg:w-full"/></a>
-        </div>
-        <div className="mt-4 flex justify-between">
-          <div>
-            <h3 className="text-sm text-white">
-              <a href="/book/06">
-                <span aria-hidden="true" className="absolute inset-0"></span>
-                Harry Potter and the Half-Blood Prince              </a>
-            </h3>
-            <p className="mt-1 text-sm text-gray-500">2005</p>
-          </div>
-        </div>
-      </div>      
-      {/* <!-- More products... --> */}
 
-
-      <div className="group relative">
-        <div className="aspect-h-1 aspect-w-1 w-full max-sm:w-60 overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-        <a href="/book/07"><img src={book7} alt="Front of men&#039;s Basic Tee in black." className="h-full w-full object-cover object-center lg:h-full lg:w-full"/></a>
-        </div>
-        <div className="mt-4 flex justify-between">
-          <div>
-            <h3 className="text-sm text-white">
-              <a href="/book/07">
-                <span aria-hidden="true" className="absolute inset-0"></span>
-                Harry Potter and the Deathly Hallows              </a>
-            </h3>
-            <p className="mt-1 text-sm text-gray-500">2007</p>
-          </div>
-        </div>
-      </div>
-      {/* <!-- More products... --> */}
-
-      <div className="group relative">
-        <div className="aspect-h-1 aspect-w-1 w-full max-sm:w-60 overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-        <a href="/book/08"><img src={book8}alt="Front of men&#039;s Basic Tee in black." className="h-full w-full object-cover object-center lg:h-full lg:w-full"/></a>
-        </div>
-        <div className="mt-4 flex justify-between">
-          <div>
-            <h3 className="text-sm text-white">
-              <a href="/book/08">
-                <span aria-hidden="true" className="absolute inset-0"></span>
-                Harry Potter and the Cursed Child              </a>
-            </h3>
-            <p className="mt-1 text-sm text-gray-500">2016</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-  </div>
-
-
-  {/* <div className="all h-full"> */}
-            <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+            <div className="ml-60 mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
     <h2 className="italic text-2xl font-bold tracking-tight text-white">The “Hogwarts library” Texts Books</h2>
 
     <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
       <div className="group relative">
-        <div className="aspect-h-1 aspect-w-1 w-full max-sm:w-60 overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+        <div className="aspect-h-1 aspect-w-1 w-60 max-sm:w-60 overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
         <a href="/book/09"><img src={book9} alt="Front of men&#039;s Basic Tee in black." className="h-full w-full object-cover object-center lg:h-full lg:w-full"/></a>
         </div>
         <div className="mt-4 flex justify-between">
@@ -240,7 +143,7 @@ export default function home() {
                 <span aria-hidden="true" className="absolute inset-0"></span>
                 Fantastic Beasts and Where to Find Them              </a>
             </h3>
-            <p className="mt-1 text-sm text-gray-500">2016</p>
+            <p className="mt-1 text-sm text-gray-500">- J.K. Rowling -</p>
           </div>
         </div>
       </div>
@@ -248,7 +151,7 @@ export default function home() {
       {/* <!-- More products... --> */}
       
       <div className="group relative">
-        <div className="aspect-h-1 aspect-w-1 w-full max-sm:w-60 overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+        <div className="aspect-h-1 aspect-w-1 w-60 max-sm:w-60 overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
         <a href="/book/10"><img src={book10} alt="Front of men&#039;s Basic Tee in black." className="h-full w-full object-cover object-center lg:h-full lg:w-full"/></a>
         </div>
         <div className="mt-4 flex justify-between">
@@ -258,14 +161,14 @@ export default function home() {
                 <span aria-hidden="true" className="absolute inset-0"></span>
                 Quidditch Through the Ages              </a>
             </h3>
-            <p className="mt-1 text-sm text-gray-500">2016</p>
+            <p className="mt-1 text-sm text-gray-500">- J.K. Rowling -</p>
           </div>
         </div>
       </div>
       {/* <!-- More products... --> */}
 
       <div className="group relative">
-        <div className="aspect-h-1 aspect-w-1 w-full max-sm:w-60 overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+        <div className="aspect-h-1 aspect-w-1 w-60 max-sm:w-60 overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
         <a href="/book/11"><img src={book11} alt="Front of men&#039;s Basic Tee in black." className="h-full w-full object-cover object-center lg:h-full lg:w-full"/></a>
         </div>
         <div className="mt-4 flex justify-between">
@@ -275,14 +178,13 @@ export default function home() {
                 <span aria-hidden="true" className="absolute inset-0"></span>
                 The Tales of Beedle the Bard              </a>
             </h3>
-            <p className="mt-1 text-sm text-gray-500">2008</p>
+            <p className="mt-1 text-sm text-gray-500">- J.K. Rowling -</p>
           </div>
         </div>
       </div>
 
     </div>
   </div>
-  {/* </div> */}
 
 
   <div className="mt-5">
@@ -291,7 +193,7 @@ export default function home() {
 
     <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
       <div className="group relative">
-        <div className="aspect-h-1 aspect-w-1 w-full max-sm:w-60 overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+        <div className="aspect-h-1 aspect-w-1 w-60 max-sm:w-60 overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
         <a href="/book/12"><img src={book12} alt="Front of men&#039;s Basic Tee in black." className="h-full w-full object-cover object-center lg:h-full lg:w-full"/></a>
         </div>
         <div className="mt-4 flex justify-between">
@@ -301,7 +203,7 @@ export default function home() {
                 <span aria-hidden="true" className="absolute inset-0"></span>
                 Hogwarts: An Incomplete and Unreliable Guide              </a>
             </h3>
-            <p className="mt-1 text-sm text-gray-500">2016</p>
+            <p className="mt-1 text-sm text-gray-500">- J.K. Rowling -</p>
           </div>
         </div>
       </div>
@@ -309,7 +211,7 @@ export default function home() {
       {/* <!-- More products... --> */}
       
       <div className="group relative">
-        <div className="aspect-h-1 aspect-w-1 w-full max-sm:w-60 overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+        <div className="aspect-h-1 aspect-w-1 w-60 max-sm:w-60 overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
         <a href="/book/13"> <img src={book13} alt="Front of men&#039;s Basic Tee in black." className="h-full w-full object-cover object-center lg:h-full lg:w-full"/></a>
         </div>
         <div className="mt-4 flex justify-between">
@@ -319,14 +221,14 @@ export default function home() {
                 <span aria-hidden="true" className="absolute inset-0"></span>
                 Short Stories from Hogwarts of Power, Politics and Pesky Poltergeists              </a>
             </h3>
-            <p className="mt-1 text-sm text-gray-500">2016</p>
+            <p className="mt-1 text-sm text-gray-500">- J.K. Rowling -</p>
           </div>
         </div>
       </div>
       {/* <!-- More products... --> */}
 
       <div className="group relative">
-        <div className="aspect-h-1 aspect-w-1 w-full max-sm:w-60 overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+        <div className="aspect-h-1 aspect-w-1 w-60 max-sm:w-60 overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
         <a href="/book/14"><img src={book14} alt="Front of men&#039;s Basic Tee in black." className="h-full w-full object-cover object-center lg:h-full lg:w-full"/></a>
         </div>
         <div className="mt-4 flex justify-between">
@@ -334,16 +236,16 @@ export default function home() {
             <h3 className="text-sm text-white">
               <a href="/book/14">
                 <span aria-hidden="true" className="absolute inset-0"></span>
-                Short Stories from Hogwarts of Heroism, Hardship and Dangerous Hobbies              </a>
+                Short Stories from Hogwarts of Heroism, Hardship and Dangerous Hobbies</a>
             </h3>
-            <p className="mt-1 text-sm text-gray-500">2016</p>
+            <p className="mt-1 text-sm text-gray-500">- J.K. Rowling -</p>
           </div>
         </div>
       </div>
       {/* <!-- More products... --> */}
 
       <div className="group relative">
-        <div className="aspect-h-1 aspect-w-1 w-full max-sm:w-60 overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+        <div className="aspect-h-1 aspect-w-1 w-60 max-sm:w-60 overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
         <a href="/book/15"><img src={book15} alt="Front of men&#039;s Basic Tee in black." className="h-full w-full object-cover object-center lg:h-full lg:w-full"/></a>
         </div>
         <div className="mt-4 flex justify-between">
@@ -354,14 +256,14 @@ export default function home() {
                 The Fantastic Beasts screenplays
                               </a>
             </h3>
-            <p className="mt-1 text-sm text-gray-500">2016</p>
+            <p className="mt-1 text-sm text-gray-500">- J.K. Rowling -</p>
           </div>
         </div>
       </div>
       {/* <!-- More products... --> */}
 
       <div className="group relative">
-        <div className="aspect-h-1 aspect-w-1 w-full max-sm:w-60 overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+        <div className="aspect-h-1 aspect-w-1 w-60 max-sm:w-60 overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
         <a href="/book/16"><img src={book16} alt="Front of men&#039;s Basic Tee in black." className="h-full w-full object-cover object-center lg:h-full lg:w-full"/></a>
         </div>
         <div className="mt-4 flex justify-between">
@@ -371,17 +273,17 @@ export default function home() {
                 <span aria-hidden="true" className="absolute inset-0"></span>
                 Fantastic Beasts: The Crimes of Grindelwald ― The Original Screenplay</a>
             </h3>
-            <p className="mt-1 text-sm text-gray-500">2018</p>
+            <p className="mt-1 text-sm text-gray-500">- J.K. Rowling -</p>
           </div>
         </div>
       </div>
-
- 
-    </div>
-  </div>
-  </div>
-  </div>
+      </div>
+      </div>
+      </div>
+      </div>
   
+
+
   <Footer/>
 
 </div>
