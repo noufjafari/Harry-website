@@ -3,14 +3,6 @@ import Nav from "../components/nav";
 import Footer from "../components/footer";
 import Card2 from '../components/Cards2';
 
-import book1 from '../assets/1151Ppi-8kISL._SY346_.jpg';
-import book2 from '../assets/222510CXXt9CqL._SY346_.jpg';
-import book3 from '../assets/33351vbhfNA0+L.jpg';
-import book4 from '../assets/444513TQ4ihqqL.jpg';
-import book5 from '../assets/555519jC3ZUisL.jpg';
-import book6 from '../assets/666512xFZRDM3L.jpg';
-import book7 from '../assets/77751V6zvaRjkL.jpg';
-import book8 from '../assets/88851Da+RazehL.jpg';
 import book9 from '../assets/99951XXxJ0uQzL.jpg';
 import book10 from '../assets/10101051603y-+-XL.jpg';
 import book11 from '../assets/11111151tNhAlrEzL.jpg';
@@ -74,8 +66,8 @@ function bookDe() {
         {
         bookData != null ? 
         <>
-        <div className=" flex justify-center">
-        <div className=" py-3 gap-5 text-center m-20">
+        <div className=" flex justify-center ">
+        <div className=" py-3 gap-5 text-center m-20 ">
         <p className="text-2xl m-5 mx-10  w-80">{bookData}</p></div>
         </div>
         </> 

@@ -60,79 +60,79 @@ export default function about() {
 
   <div className=" flex justify-center  ">
 <div className=" flex flex-col items-center w-11/12 ">
-<p className="italic drop-shadow-2x text-center text-7xl font-semibold mt-20 text-white">Movie Casts</p>
+<p className="italic drop-shadow-2x text-center text-7xl max-sm:text-2xl font-semibold mt-20 text-white">Movie Casts</p>
 
-<div className="grid grid-cols-4 mt-20 w-1/2 ">
-<div className="flex flex-col justify-center w-40 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300 "><img src={ cast1} /></div>
-<div className="flex flex-col justify-center w-40 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300 "><img src={ cast2} /></div>
-<div className="flex flex-col justify-center w-40 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300 "><img src={cast3 } /></div>
-<div className="flex flex-col justify-center w-40 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300 "><img src={ cast4} /></div>   
+<div className="grid grid-cols-4 max-sm:grid-cols-4 max-sm:mt-16 max-sm:w-[20rem] mt-20 w-1/2 ">
+<div className="flex flex-col justify-center w-40 max-sm:w-20 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300 "><img src={ cast1} /></div>
+<div className="flex flex-col justify-center w-40 max-sm:w-20 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300 "><img src={ cast2} /></div>
+<div className="flex flex-col justify-center w-40 max-sm:w-20 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300 "><img src={cast3 } /></div>
+<div className="flex flex-col justify-center w-40 max-sm:w-20 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300 "><img src={ cast4} /></div>   
  </div>
 
- <div className="grid grid-cols-3 ml-5  w-2/5 ">
-<div className=" flex flex-col justify-center w-40 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300 "><img src={cast5 } /></div>
-<div className=" flex flex-col justify-center w-40 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300 "><img src={ cast6} /></div>
-<div className=" flex flex-col justify-center w-40 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300 "><img src={cast8 } /></div>
+ <div className="grid grid-cols-3 ml-5 max-sm:w-[15rem] max-sm:ml-2 w-2/5 ">
+<div className=" flex flex-col justify-center w-40 max-sm:w-20 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300 "><img src={cast5 } /></div>
+<div className=" flex flex-col justify-center w-40 max-sm:w-20 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300 "><img src={ cast6} /></div>
+<div className=" flex flex-col justify-center w-40 max-sm:w-20 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300 "><img src={cast8 } /></div>
  </div>
 
- <div className="grid grid-cols-4 w-1/2 ">
-<div className=" flex flex-col justify-center w-40 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={cast9 } /></div>
-<div className=" flex flex-col justify-center w-40 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={ cast10} /></div>
-<div className=" flex flex-col justify-center w-40 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={ cast11} /></div>
-<div className=" flex flex-col justify-center w-40 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={ cast12} /></div>   
+ <div className="grid grid-cols-4 w-1/2 max-sm:w-[20rem]">
+<div className=" flex flex-col justify-center w-40 max-sm:w-20 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={cast9 } /></div>
+<div className=" flex flex-col justify-center w-40 max-sm:w-20 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={ cast10} /></div>
+<div className=" flex flex-col justify-center w-40 max-sm:w-20 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={ cast11} /></div>
+<div className=" flex flex-col justify-center w-40 max-sm:w-20 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={ cast12} /></div>   
  </div>
 
- <div className="grid grid-cols-3 ml-5   w-2/5 ">
-<div className=" flex flex-col justify-center w-40 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={ cast13} /></div>
-<div className=" flex flex-col justify-center w-40 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={ cast14} /></div>
-<div className=" flex flex-col justify-center w-40 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={ cast15} /></div>
+ <div className="grid grid-cols-3 ml-5 max-sm:w-[15rem] max-sm:ml-2 w-2/5 ">
+<div className=" flex flex-col justify-center w-40 max-sm:w-20 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={ cast13} /></div>
+<div className=" flex flex-col justify-center w-40 max-sm:w-20 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={ cast14} /></div>
+<div className=" flex flex-col justify-center w-40 max-sm:w-20 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={ cast15} /></div>
  </div>
 
- <div className="grid grid-cols-4  w-1/2 ">
-<div className=" flex flex-col justify-center w-40 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={cast16 } /></div>
-<div className=" flex flex-col justify-center w-40 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={ cast17} /></div>
-<div className=" flex flex-col justify-center w-40 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={cast18 } /></div>
-<div className=" flex flex-col justify-center w-40 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={ cast19} /></div>   
+ <div className="grid grid-cols-4  w-1/2 max-sm:w-[20rem]">
+<div className=" flex flex-col justify-center w-40 max-sm:w-20 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={cast16 } /></div>
+<div className=" flex flex-col justify-center w-40 max-sm:w-20 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={ cast17} /></div>
+<div className=" flex flex-col justify-center w-40 max-sm:w-20 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={cast18 } /></div>
+<div className=" flex flex-col justify-center w-40 max-sm:w-20 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={ cast19} /></div>   
  </div>
 
- <div className="grid grid-cols-3 ml-5   w-2/5 ">
-<div className=" flex flex-col justify-center w-40 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={ cast20} /></div>
-<div className=" flex flex-col justify-center w-40 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={ cast21} /></div>
-<div className=" flex flex-col justify-center w-40 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={cast22 } /></div>
+ <div className="grid grid-cols-3 ml-5 max-sm:w-[15rem] max-sm:ml-2 w-2/5 ">
+<div className=" flex flex-col justify-center w-40 max-sm:w-20 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={ cast20} /></div>
+<div className=" flex flex-col justify-center w-40 max-sm:w-20 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={ cast21} /></div>
+<div className=" flex flex-col justify-center w-40 max-sm:w-20 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={cast22 } /></div>
  </div>
 
- <div className="grid grid-cols-4 w-1/2  ">
-<div className=" flex flex-col justify-center w-40 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={cast23 } /></div>
-<div className=" flex flex-col justify-center w-40 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={ cast24} /></div>
-<div className=" flex flex-col justify-center w-40 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={cast25 } /></div>
-<div className=" flex flex-col justify-center w-40 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={ cast26} /></div>   
+ <div className="grid grid-cols-4 w-1/2 max-sm:w-[20rem] ">
+<div className=" flex flex-col justify-center w-40 max-sm:w-20 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={cast23 } /></div>
+<div className=" flex flex-col justify-center w-40 max-sm:w-20 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={ cast24} /></div>
+<div className=" flex flex-col justify-center w-40 max-sm:w-20 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={cast25 } /></div>
+<div className=" flex flex-col justify-center w-40 max-sm:w-20 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={ cast26} /></div>   
  </div>
 
- <div className="grid grid-cols-3  ml-5  w-2/5 ">
-<div className=" flex flex-col justify-center w-40 text-center"><img src={cast27 } /></div>
-<div className=" flex flex-col justify-center w-40 text-center"><img src={cast28 } /></div>
-<div className=" flex flex-col justify-center w-40 text-center"><img src={ cast29} /></div>
+ <div className="grid grid-cols-3 ml-5 max-sm:w-[15rem] max-sm:ml-2 w-2/5 ">
+<div className=" flex flex-col justify-center w-40 text-center max-sm:w-20 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={cast27 } /></div>
+<div className=" flex flex-col justify-center w-40 text-center max-sm:w-20 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={cast28 } /></div>
+<div className=" flex flex-col justify-center w-40 text-center max-sm:w-20 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={ cast29} /></div>
  </div>
 
- <div className="grid grid-cols-4 w-1/2  ">
-<div className=" flex flex-col justify-center w-40 text-center"><img src={ cast30} /></div>
-<div className=" flex flex-col justify-center w-40 text-center"><img src={ cast31} /></div>
-<div className=" flex flex-col justify-center w-40 text-center"><img src={ cast32} /></div>
-<div className=" flex flex-col justify-center w-40 text-center"><img src={cast33 } /></div>   
+ <div className="grid grid-cols-4 w-1/2 max-sm:w-[20rem] ">
+<div className=" flex flex-col justify-center w-40 text-center max-sm:w-20 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={ cast30} /></div>
+<div className=" flex flex-col justify-center w-40 text-center max-sm:w-20 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={ cast31} /></div>
+<div className=" flex flex-col justify-center w-40 text-center max-sm:w-20 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={ cast32} /></div>
+<div className=" flex flex-col justify-center w-40 text-center max-sm:w-20 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={cast33 } /></div>   
  </div>
 
- <div className="grid grid-cols-3 ml-5  w-2/5 ">
-<div className=" flex flex-col justify-center w-40 text-center"><img src={cast34 } /></div>
-<div className=" flex flex-col justify-center w-40 text-center"><img src={ cast35} /></div>
-<div className=" flex flex-col justify-center w-40 text-center"><img src={ cast36} /></div>
+ <div className="grid grid-cols-3 ml-5 max-sm:w-[15rem] max-sm:ml-2 w-2/5 ">
+<div className=" flex flex-col justify-center w-40 text-center max-sm:w-20 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={cast34 } /></div>
+<div className=" flex flex-col justify-center w-40 text-center max-sm:w-20 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={ cast35} /></div>
+<div className=" flex flex-col justify-center w-40 text-center max-sm:w-20 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={ cast36} /></div>
  </div>
 
 
- <div className="grid grid-cols-4 w-1/2 mb-20 ">
-<div className=" flex flex-col justify-center w-40 text-center"><img src={ cast37} /></div>
-<div className=" flex flex-col justify-center w-40 text-center"><img src={ cast38} /></div>
-<div className=" flex flex-col justify-center w-40 text-center"><img src={ cast39} /></div>
-<div className=" flex flex-col justify-center w-40 text-center"><img src={cast40 } /></div>   
+ <div className="grid grid-cols-4 w-1/2 mb-20 max-sm:w-[20rem]">
+<div className=" flex flex-col justify-center w-40 text-center max-sm:w-20 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={ cast37} /></div>
+<div className=" flex flex-col justify-center w-40 text-center max-sm:w-20 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={ cast38} /></div>
+<div className=" flex flex-col justify-center w-40 text-center max-sm:w-20 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={ cast39} /></div>
+<div className=" flex flex-col justify-center w-40 text-center max-sm:w-20 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300"><img src={cast40 } /></div>   
  </div>
  </div>
  </div>
